@@ -1,0 +1,53 @@
+@media(min-width: 1024px){
+    .container{
+        display: flex;
+        flex-direction: column;
+
+        width: 596px;
+        height: 718px;
+
+        background-color: #F4F4F4;
+        border-radius: 50px 50px 0 0;
+        .title{
+            
+            padding: 2.5rem 0 0 2.5rem;
+            align-self: flex-start;
+            
+        }
+        .subTitle{
+            padding: 0 0 0 2.5rem;
+            align-self: flex-start;
+            color: #00A7FD;
+
+        }
+
+        .flatcontainer{
+            padding: 29px;
+            overflow-y: scroll;
+            margin-right: 20px;
+
+        }
+        .flatcontainer::-webkit-scrollbar{
+            width: 12px;
+             
+            
+        }
+        .flatcontainer::-webkit-scrollbar-thumb{
+            background: #DBDBDB 0% 0% no-repeat padding-box;
+            width: 12px;
+            height: 54px;
+            border-radius: 6px;
+        
+        }
+
+        .flatcontainer::-webkit-scrollbar-track {
+            background: #FFFFFF 0% 0% no-repeat padding-box;  
+            border-radius: 9px;
+          }
+
+        
+    
+    }
+
+    
+}
