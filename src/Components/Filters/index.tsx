@@ -1,10 +1,23 @@
 import styles from './styles.module.scss';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import { useState } from 'react';
 //import Checkbox from'rc-checkbox'
 //import 'rc-checkbox/assets/index.css'
 
 export default function Filters() {
+  const [filters, setfilters] = useState<String[]>(['','','','','','','','','','','','','','','','','',''])
+
+  const [chave1, setChave1] =useState<number>(0)
+  const [chave2, setChave2] =useState<number>(0)
+
+  function handleSeek(val1,val2){
+    console.log(val1 +' '+ val2)
+
+    setChave1(val1);
+    setChave2(val2)
+
+}
 
   return (
     <div className={styles.container}>
@@ -16,9 +29,9 @@ export default function Filters() {
         <span>maxCP</span>
         <Slider.Range 
           max={1500}
-          onChange={()=>{}}
-          defaultValue={[0,1500]}
-          
+          onChange={([val1,val2])=>{handleSeek(val1,val2)}}
+          defaultValue={[0,3000]}
+  
           step={2}
           trackStyle={[{backgroundColor:'#04E762',borderRadius: '5px', height: '10px'}]}
           maximumTrackStyle={{backgroundColor:'#DBDBDB',borderRadius: '5px', height: '10px'}}
@@ -31,8 +44,8 @@ export default function Filters() {
 
           />
           <div>
-            <span>329</span>
-            <span>2512</span>
+            <span>{chave1}</span>
+            <span>{chave2}</span>
           </div>
       </div>
 
@@ -40,7 +53,7 @@ export default function Filters() {
       <span>Types</span>
           <div className={styles.table}>
             <div className={styles.col1}>
-              <span><input type='checkbox'/>Normal</span>
+              <span><input onChange={(e)=>{console.log(e)}} value='Normal' type='checkbox'/>Normal</span>
               <span><input type='checkbox'/>Water</span>
               <span><input type='checkbox'/>Poison</span>
               <span><input type='checkbox'/>Psychic</span>

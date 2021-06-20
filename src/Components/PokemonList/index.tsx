@@ -15,14 +15,11 @@ type pokemon ={
 
 }
 
-type data=(pokemon[]);
-  
-
 
 export default function PokemonList() {
 
 
-  const [data, setData]= useState<data>([]);
+  const [data, setData]= useState<pokemon[]>([]);
 
   useEffect(()=>{
     getPokemons()
@@ -70,8 +67,6 @@ export default function PokemonList() {
 
       setData(data)
 
-      
-
      }
     )
   }
@@ -83,26 +78,24 @@ export default function PokemonList() {
 
   return (
     <div className={styles.container}>
+
       <h1 className={styles.title}>Lista de pokémons</h1>
       <span className={styles.subTitle}>Total viíveis: 158</span>
       <div className={styles.flatcontainer}>
+
       <Flatlist
-        
         display={{
           grid: true,
           minColumnWidth: "240px",
           rowGap:"15px"
-      
-          
         }}
-
         list={data}
         renderItem={renderPokemon}
         renderWhenEmpty={() => <div>List is empty!</div>}
         sortBy={["name", {key: "name", descending: true}]}
       />
-      </div>
 
+      </div>
     </div>
   )
 }
