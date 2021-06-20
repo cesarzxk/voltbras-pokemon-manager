@@ -1,23 +1,43 @@
 import styles from './styles.module.scss';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import { useState } from 'react';
+import { useGlobal } from '../../Context/globalContext';
+
 //import Checkbox from'rc-checkbox'
 //import 'rc-checkbox/assets/index.css'
 
 export default function Filters() {
-  const [filters, setfilters] = useState<String[]>(['','','','','','','','','','','','','','','','','',''])
+  const {chave1, chave2, filters, setChave1, setChave2, setfilters} = useGlobal()
+  
 
-  const [chave1, setChave1] =useState<number>(0)
-  const [chave2, setChave2] =useState<number>(0)
-
-  function handleSeek(val1,val2){
-    console.log(val1 +' '+ val2)
+  function handleSeek(val1:number, val2:number){
 
     setChave1(val1);
-    setChave2(val2)
+    setChave2(val2);
 
-}
+  }
+
+
+  function changeFilters(value:string){
+    const [id, content] = value.split(' ');
+    
+
+    let newFilter = filters.slice()
+
+    if (filters[id] == content){
+      newFilter[id] = '';
+      setfilters(newFilter)
+      console.log(filters)
+      
+    }else{
+      newFilter[id] = content;
+      setfilters(newFilter)
+      console.log(filters)
+
+    }
+
+  }
+
 
   return (
     <div className={styles.container}>
@@ -53,28 +73,28 @@ export default function Filters() {
       <span>Types</span>
           <div className={styles.table}>
             <div className={styles.col1}>
-              <span><input onChange={(e)=>{console.log(e)}} value='Normal' type='checkbox'/>Normal</span>
-              <span><input type='checkbox'/>Water</span>
-              <span><input type='checkbox'/>Poison</span>
-              <span><input type='checkbox'/>Psychic</span>
-              <span><input type='checkbox'/>Bug</span>
-              <span><input type='checkbox'/>Dark</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="0 Normal" type='checkbox'/>Normal</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="1 Water" type='checkbox'/>Water</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="2 Poison" type='checkbox'/>Poison</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="3 Psychic" type='checkbox'/>Psychic</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="4 Bug" type='checkbox'/>Bug</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="5 Dark" type='checkbox'/>Dark</span>
             </div>
             <div className={styles.col2}>
-              <span><input type='checkbox'/>Fire</span>
-              <span><input type='checkbox'/>Flying</span>
-              <span><input type='checkbox'/>Elecspanic</span>
-              <span><input type='checkbox'/>Rock</span>
-              <span><input type='checkbox'/>Dragon</span>
-              <span><input type='checkbox'/>Steel</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="6 Fire" type='checkbox'/>Fire</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="7 Flying" type='checkbox'/>Flying</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="8 Elecspanic" type='checkbox'/>Elecspanic</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="9 Rock" type='checkbox'/>Rock</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="10 Dragon" type='checkbox'/>Dragon</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="11 Steel" type='checkbox'/>Steel</span>
             </div>
             <div className={styles.col3}>
-              <span><input type='checkbox'/>Fighting</span>
-              <span><input type='checkbox'/>Grass</span>
-              <span><input type='checkbox'/>Ground</span>
-              <span><input type='checkbox'/>Ice</span>
-              <span><input type='checkbox'/>Ghost</span>
-              <span><input type='checkbox'/>Fairy</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="12 Fighting" type='checkbox'/>Fighting</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="13 Grass" type='checkbox'/>Grass</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="14 Ground" type='checkbox'/>Ground</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="15 Ice" type='checkbox'/>Ice</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="16 Ghost" type='checkbox'/>Ghost</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="17 Fairy" type='checkbox'/>Fairy</span>
             </div>
           </div>
       </section>
