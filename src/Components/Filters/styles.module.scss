@@ -51,18 +51,18 @@
         }
         
 
-        table{
+        .table{
             display: flex;
             justify-content: space-between;
             flex-direction: row;
             padding-top: 10px;
             
-            td{
+            div{
                 display: flex;
                 flex-direction: column;
                 row-gap: 20px;
                 
-                tr{
+                span{
                     font-size: 16px;
                     display: flex;
                     align-items: center;

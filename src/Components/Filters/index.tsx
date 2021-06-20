@@ -1,31 +1,33 @@
 import styles from './styles.module.scss';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import Checkbox from'rc-checkbox'
+//import Checkbox from'rc-checkbox'
 //import 'rc-checkbox/assets/index.css'
 
 export default function Filters() {
 
-  
-
-
-
-
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <h1><b>Filtro</b></h1>
+        <h1><b>Filtros</b></h1>
       </div>
 
       <div className={styles.sliderBar}>
         <span>maxCP</span>
-        <Slider 
+        <Slider.Range 
           max={1500}
-          value={329}
           onChange={()=>{}}
-          trackStyle={{backgroundColor:'#DBDBDB',borderRadius: '5px', height: '10px'}} 
-          railStyle={{backgroundColor:'#04E762',borderRadius: '5px', height: '10px'}}
-          handleStyle={{borderColor:'#FFFFFF', height:'18px', width:'18px'}}
+          defaultValue={[0,1500]}
+          
+          step={2}
+          trackStyle={[{backgroundColor:'#04E762',borderRadius: '5px', height: '10px'}]}
+          maximumTrackStyle={{backgroundColor:'#DBDBDB',borderRadius: '5px', height: '10px'}}
+          handleStyle={[
+
+            {borderColor:'#FFFFFF', height:'18px', width:'18px'},
+            {borderColor:'#FFFFFF', height:'18px', width:'18px'}
+
+          ]}
 
           />
           <div>
@@ -34,36 +36,35 @@ export default function Filters() {
           </div>
       </div>
 
-      <div className={styles.types}>
+      <section className={styles.types}>
       <span>Types</span>
-        <table>
-          <td className={styles.col1}>
-            <tr><input type='checkbox'/>Normal</tr>
-            <tr><input type='checkbox'/>Water</tr>
-            <tr><input type='checkbox'/>Poison</tr>
-            <tr><input type='checkbox'/>Psychic</tr>
-            <tr><input type='checkbox'/>Bug</tr>
-            <tr><input type='checkbox'/>Dark</tr>
-          </td>
-          <td className={styles.col2}>
-            <tr><input type='checkbox'/>Fire</tr>
-            <tr><input type='checkbox'/>Flying</tr>
-            <tr><input type='checkbox'/>Electric</tr>
-            <tr><input type='checkbox'/>Rock</tr>
-            <tr><input type='checkbox'/>Dragon</tr>
-            <tr><input type='checkbox'/>Steel</tr>
-          </td>
-          <td className={styles.col3}>
-            <tr><input type='checkbox'/>Fighting</tr>
-            <tr><input type='checkbox'/>Grass</tr>
-            <tr><input type='checkbox'/>Ground</tr>
-            <tr><input type='checkbox'/>Ice</tr>
-            <tr><input type='checkbox'/>Ghost</tr>
-            <tr><input type='checkbox'/>Fairy</tr>
-          </td>
-        </table>
-        
-      </div>
+          <div className={styles.table}>
+            <div className={styles.col1}>
+              <span><input type='checkbox'/>Normal</span>
+              <span><input type='checkbox'/>Water</span>
+              <span><input type='checkbox'/>Poison</span>
+              <span><input type='checkbox'/>Psychic</span>
+              <span><input type='checkbox'/>Bug</span>
+              <span><input type='checkbox'/>Dark</span>
+            </div>
+            <div className={styles.col2}>
+              <span><input type='checkbox'/>Fire</span>
+              <span><input type='checkbox'/>Flying</span>
+              <span><input type='checkbox'/>Elecspanic</span>
+              <span><input type='checkbox'/>Rock</span>
+              <span><input type='checkbox'/>Dragon</span>
+              <span><input type='checkbox'/>Steel</span>
+            </div>
+            <div className={styles.col3}>
+              <span><input type='checkbox'/>Fighting</span>
+              <span><input type='checkbox'/>Grass</span>
+              <span><input type='checkbox'/>Ground</span>
+              <span><input type='checkbox'/>Ice</span>
+              <span><input type='checkbox'/>Ghost</span>
+              <span><input type='checkbox'/>Fairy</span>
+            </div>
+          </div>
+      </section>
       
     </div>
   )

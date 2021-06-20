@@ -13,8 +13,8 @@
 
     img{
         flex: 1;
-        max-width:64px;
-        max-height:64px;
+        width:64px;
+        height:64px;
         border-radius: 14px;
         border: 1px solid #DBDBDB;
         
@@ -31,12 +31,16 @@
         }
 
         h6{
+            max-width: 15ch;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             color:#939393;
+            flex:1;
         }
     
         div{
             display: flex;
-
             border-radius: 4px;
             color:#ffffff;
 
@@ -47,7 +51,7 @@
             justify-content: center;
             align-items: center;
 
-            background-color:#662C91;
+            
             width: auto;
             height: auto;
 

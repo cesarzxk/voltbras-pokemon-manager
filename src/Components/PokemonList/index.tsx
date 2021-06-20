@@ -1,43 +1,88 @@
 import styles from './styles.module.scss';
 import Pokemon from '../Pokemon';
 import Flatlist from "flatlist-react";
+import{gql}from "@apollo/client";
+import { client } from '../../services/api';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
+type pokemon ={
+  id:number;
+  name:string;
+  maxcp:number;
+  img:string;
+  type:string[];
+
+}
+
+type data=(pokemon[]);
+  
 
 
 export default function PokemonList() {
 
 
-  const renderPerson = (pokemon) => {
+  const [data, setData]= useState<data>([]);
+
+  useEffect(()=>{
+    getPokemons()
+  }, []);
+
+
+
+  async function getPokemons() {
+    await client.query({
+      query:gql`
+      {
+        pokemons(first:151) {
+          number
+          name
+          maxCP
+          image
+          attacks{
+            special{
+              type
+            }
+          }
+        }
+      }`
+
+    }).then(result => {
+      const data = result.data.pokemons.map(response=>{
+        const types = response.attacks.special.map(attack=>{
+          return attack.type}
+        )
+        let newTypes = new Set();
+
+        for(let i=0; i<types.length;i++){
+          newTypes.add(types[i])
+
+        };
+
+        return{
+          id: response.number,  
+          name: response.name, 
+          img: response.image, 
+          type:[...newTypes.values()],
+          maxcp: response.maxCP
+        }
+      })
+
+      setData(data)
+
+      
+
+     }
+    )
+  }
+
+
+  const renderPokemon = (pokemon) => {
     return <Pokemon key={pokemon.id} data={pokemon}/>;
   }
 
-  const pokemon = [
-    {id:1,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:2,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:3,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:4,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:5,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:6,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:6,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:7,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:8,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:9,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:10,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:11,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:8,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:9,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    {id:8,  name: 'Bulbasaur', img:'/bulbasaur.png', type: ['Grass', 'Poison' ], cp:'951'},
-    {id:9,  name: 'Pikachu', img:'/pikachu.png', type: ['Eletric'], cp:'1051'},
-    
-  ]
-
-
-
-
-
   return (
     <div className={styles.container}>
-
       <h1 className={styles.title}>Lista de pokémons</h1>
       <span className={styles.subTitle}>Total viíveis: 158</span>
       <div className={styles.flatcontainer}>
@@ -47,15 +92,14 @@ export default function PokemonList() {
           grid: true,
           minColumnWidth: "240px",
           rowGap:"15px"
+      
           
         }}
 
-        
-
-        list={pokemon}
-        renderItem={renderPerson}
+        list={data}
+        renderItem={renderPokemon}
         renderWhenEmpty={() => <div>List is empty!</div>}
-        sortBy={["firstName", {key: "firstName", descending: true}]}
+        sortBy={["name", {key: "name", descending: true}]}
       />
       </div>
 
