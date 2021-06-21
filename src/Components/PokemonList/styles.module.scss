@@ -22,9 +22,17 @@
         }
 
         .flatcontainer{
-            padding: 29px;
+            margin-left: 29px;
+            padding-right: 29px;
+            margin-top: 31px;
+
+            align-self: center;
+            
             overflow-y: scroll;
             margin-right: 20px;
+            height: 90%;
+            width: 86%;
+            
 
         }
         .flatcontainer::-webkit-scrollbar{

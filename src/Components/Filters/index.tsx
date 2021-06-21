@@ -17,7 +17,6 @@ export default function Filters() {
 
   }
 
-
   function changeFilters(value:string){
     const [id, content] = value.split(' ');
     
@@ -27,12 +26,10 @@ export default function Filters() {
     if (filters[id] == content){
       newFilter[id] = '';
       setfilters(newFilter)
-      console.log(filters)
       
     }else{
       newFilter[id] = content;
       setfilters(newFilter)
-      console.log(filters)
 
     }
 
@@ -48,10 +45,9 @@ export default function Filters() {
       <div className={styles.sliderBar}>
         <span>maxCP</span>
         <Slider.Range 
-          max={1500}
+          max={3500}
           onChange={([val1,val2])=>{handleSeek(val1,val2)}}
-          defaultValue={[0,3000]}
-  
+          defaultValue={[0,4000]}
           step={2}
           trackStyle={[{backgroundColor:'#04E762',borderRadius: '5px', height: '10px'}]}
           maximumTrackStyle={{backgroundColor:'#DBDBDB',borderRadius: '5px', height: '10px'}}
@@ -83,7 +79,7 @@ export default function Filters() {
             <div className={styles.col2}>
               <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="6 Fire" type='checkbox'/>Fire</span>
               <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="7 Flying" type='checkbox'/>Flying</span>
-              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="8 Elecspanic" type='checkbox'/>Elecspanic</span>
+              <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="8 Electric" type='checkbox'/>Electric</span>
               <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="9 Rock" type='checkbox'/>Rock</span>
               <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="10 Dragon" type='checkbox'/>Dragon</span>
               <span><input onChange={({currentTarget})=>{changeFilters(currentTarget.value)}} value="11 Steel" type='checkbox'/>Steel</span>

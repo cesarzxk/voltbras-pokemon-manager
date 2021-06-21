@@ -23,7 +23,7 @@ export const globalContext = createContext({} as globalContextData);
 export function GlobalProviders({children}:globalProviderProps){
     const [filters, setfilters] = useState<String[]>(['','','','','','','','','','','','','','','','','',''])
     const [chave1, setChave1] =useState<number>(0)
-    const [chave2, setChave2] =useState<number>(0)
+    const [chave2, setChave2] =useState<number>(4000)
     
      return(
         <globalContext.Provider value={{
