@@ -67,31 +67,18 @@ function filtering(type:String[], maxCP:number){
           name
           maxCP
           image
-          attacks{
-            special{
-              type
-            }
-          }
+          types
         }
       }`
 
     }).then(result => {
       const data = result.data.pokemons.map(response=>{
-        const types = response.attacks.special.map(attack=>{
-          return attack.type}
-        )
-        let newTypes = new Set();
-
-        for(let i=0; i<types.length;i++){
-          newTypes.add(types[i])
-
-        };
-
+        
         return{
           id: response.number,  
           name: response.name, 
           img: response.image, 
-          type:[...newTypes.values()],
+          type:response.types,
           maxcp: response.maxCP
         }
       })
