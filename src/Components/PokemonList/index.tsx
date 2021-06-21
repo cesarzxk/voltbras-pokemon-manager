@@ -1,32 +1,19 @@
 import styles from './styles.module.scss';
 import Pokemon from '../Pokemon';
 import Flatlist from "flatlist-react";
-import {gql}from "@apollo/client";
-import { client } from '../../services/api';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useGlobal } from '../../Context/globalContext';
 
-type pokemon ={
-  id:number;
-  name:string;
-  maxcp:number;
-  img:string;
-  type:string[];
 
-}
 
 
 export default function PokemonList() {
   const {filters, chave1, chave2}=useGlobal()
   const [isntNullFilter, setIsntNullFilter] = useState<boolean>(true);
-  const [data, setData]  = useState<pokemon[]>([]);
+  
   
   let [lcount, setlCount] = useState<number>(0);
-
-  useEffect(()=>{
-    getPokemons()
-  }, []);
 
   useEffect(()=>{
     setIsntNullFilter(filters.every((val)=>{return val==''}));
@@ -58,36 +45,7 @@ function filtering(type:String[], maxCP:number){
 }
 
 
-  async function getPokemons() {
-    await client.query({
-      query:gql`
-      {
-        pokemons(first:151) {
-          number
-          name
-          maxCP
-          image
-          types
-        }
-      }`
 
-    }).then(result => {
-      const data = result.data.pokemons.map(response=>{
-        
-        return{
-          id: response.number,  
-          name: response.name, 
-          img: response.image, 
-          type:response.types,
-          maxcp: response.maxCP
-        }
-      })
-
-      setData(data)
-
-     }
-    )
-  }
 
 
   const renderPokemon = (pokemon) => {
