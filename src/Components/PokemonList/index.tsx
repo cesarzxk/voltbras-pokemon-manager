@@ -7,9 +7,8 @@ import { useGlobal } from '../../Context/globalContext';
 
 
 
-
 export default function PokemonList() {
-  const {filters, chave1, chave2}=useGlobal()
+  const {filters, chave1, chave2, data}=useGlobal()
   const [isntNullFilter, setIsntNullFilter] = useState<boolean>(true);
   
   
@@ -22,12 +21,12 @@ export default function PokemonList() {
 
   
 function countFiltred(){
-  let array = new Set()
+  let array = []
   for(let i=0; i<data.length; i++){
     if(filtering(data[i].type, data[i].maxcp)){
-      array.add(data[i].name)}  
+      array.push(data[i].name)}  
   }
-  setlCount(array.size);
+  setlCount(array.length);
 }
   
   
@@ -45,9 +44,6 @@ function filtering(type:String[], maxCP:number){
 }
 
 
-
-
-
   const renderPokemon = (pokemon) => {
     return <Pokemon key={pokemon.id} data={pokemon}/>;
   }
@@ -56,7 +52,7 @@ function filtering(type:String[], maxCP:number){
     <div className={styles.container}>
 
       <h1 className={styles.title}>Lista de pokémons</h1>
-      <span className={styles.subTitle}>Total visíveis: {lcount}</span>
+      <span className={styles.subTitle}>Total visíveis: {isntNullFilter? (data.length):(lcount)}</span>
 
       <section className={styles.flatcontainer}>
         <div>

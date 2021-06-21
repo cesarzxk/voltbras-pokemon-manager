@@ -1,6 +1,5 @@
 import {createContext, useState, ReactNode, useContext, useEffect} from "react";
 import {gql}from "@apollo/client";
-
 import { client } from '../services/api';
 
 

@@ -11,7 +11,6 @@ export default function Filters() {
   
 
   function handleSeek(val1:number, val2:number){
-
     setChave1(val1);
     setChave2(val2);
 
@@ -19,8 +18,6 @@ export default function Filters() {
 
   function changeFilters(value:string){
     const [id, content] = value.split(' ');
-    
-
     let newFilter = filters.slice()
 
     if (filters[id] == content){
@@ -30,9 +27,7 @@ export default function Filters() {
     }else{
       newFilter[id] = content;
       setfilters(newFilter)
-
     }
-
   }
 
 
@@ -45,7 +40,7 @@ export default function Filters() {
       <div className={styles.sliderBar}>
         <span>maxCP</span>
         <Slider.Range 
-          max={3500}
+          max={4000}
           onChange={([val1,val2])=>{handleSeek(val1,val2)}}
           defaultValue={[0,4000]}
           step={2}
