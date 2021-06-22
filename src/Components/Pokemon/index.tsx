@@ -19,7 +19,6 @@ function color(){
 }
 }
 
-
   return (
     <div className={styles.container}>
       

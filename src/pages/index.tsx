@@ -1,9 +1,8 @@
-
-import PokemonList from '../Components/PokemonList';
-import Filters from '../Components/Filters';
+import dynamic from 'next/dynamic';
 import styles  from './home.module.scss';
 
-
+const PokemonList = dynamic(() => import('../Components/PokemonList'))
+const Filters = dynamic(() => import('../Components/Filters'))
 
 export default function Home() {
   return (

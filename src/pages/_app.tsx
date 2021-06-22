@@ -1,8 +1,10 @@
 import '../styles/global.scss'
+import dynamic from 'next/dynamic';
 import styles from '../styles/app.module.scss'
-import NavigationBar from '../Components/NavigationBar';
 import {GlobalProviders} from '../Context/globalContext'
 import {PokemonProvider} from '../services/api';
+
+const NavigationBar = dynamic(() => import('../Components/NavigationBar'))
 
 
 function MyApp({ Component, pageProps }) {

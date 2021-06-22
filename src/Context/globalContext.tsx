@@ -3,6 +3,7 @@ import {gql}from "@apollo/client";
 import { client } from '../services/api';
 
 
+
 type globalProviderProps = {
     children: ReactNode;
 
@@ -31,6 +32,7 @@ type pokemon ={
 export const globalContext = createContext({} as globalContextData);
 
 export function GlobalProviders({children}:globalProviderProps){
+    
     const [filters, setfilters] = useState<String[]>(['','','','','','','','','','','','','','','','','',''])
     const [key1, setKey1] =useState<number>(0)
     const [key2, setKey2] =useState<number>(4000)
@@ -39,12 +41,14 @@ export function GlobalProviders({children}:globalProviderProps){
     useEffect(()=>{
         getPokemons()
       }, []);
+
+    
   
     async function getPokemons() {
         await client.query({
         query:gql`
         {
-            pokemons(first:151) {
+            pokemons(first:1000) {
             number
             name
             maxCP
@@ -85,8 +89,8 @@ export function GlobalProviders({children}:globalProviderProps){
     )
 }
 
-
-
 export const useGlobal = () =>{
     return useContext(globalContext);
 }
+
+
