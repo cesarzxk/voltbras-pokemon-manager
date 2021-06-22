@@ -33,8 +33,8 @@ This application was part of a challenge to test the ability to implement the Gr
 Images of the application in operation.
 
 <p align="center">
-<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/122956740-a6dc4100-d357-11eb-866c-b1261e79011d.png" width="400px">
 <img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/122956492-6c72a400-d357-11eb-91cb-c78b0e8caff6.png" width="400px">
+<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/122956740-a6dc4100-d357-11eb-866c-b1261e79011d.png" width="400px">
 </p>
 
 <p align="center">
