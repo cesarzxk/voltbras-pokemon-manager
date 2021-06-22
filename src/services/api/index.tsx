@@ -2,8 +2,6 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql
 } from "@apollo/client";
 
 
@@ -12,9 +10,11 @@ export const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-export function ApolloRequest({children}){
+
+export function PokemonProvider({children}){
+  
   return(
-    <ApolloProvider client={client}>
+    <ApolloProvider  client={client}>
       {children}
     </ApolloProvider>
     )

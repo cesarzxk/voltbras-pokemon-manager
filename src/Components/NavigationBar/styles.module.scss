@@ -3,68 +3,106 @@
     height: 100vh;
     left: 0;
     top:0;
-
-    @media(max-width:767px){
-        height: 10%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        
+    
+    @media(min-width: 1201px){
         section{
-            padding-left: 1rem;
-            .logo{
-                width:3rem;
-                height:3rem;
-            }
-
+            display: flex;
+            gap:10px;
+            padding-top: 7rem;
+            padding-left: 1.875rem;
+            padding-bottom: 3.75rem;
+        
             div{
-                display: none;
+                display: grid;
+                grid-template-rows: 1fr 2fr;
+
+                strong{
+                    color:#333333;
+                    font-size: 16px;
+
+                }
+                span{
+                    color:#939393;
+                    font-size: 12px;
+                    text-align: start;
+                    
+                }
             }
         }
-        
-
         .options{
-            display: flex;
-            flex-direction: row;
             li{
-                list-style-type: none;
-                align-content: center;
-                align-items: center;
-                padding-right: 10px; 
+            display: flex;
+            list-style-type: none;
+            padding-bottom: 1.375rem;
+            align-content: center;
+            align-items: center;
 
-                .icon{
-                    height: 3rem;
-                    width: 3rem;
-                    font-size: 24px;
-                    color: #797474;
-                    padding:1px;
-                    
-                }
-                .icon:hover{
-                    color: #ffffff;
-                    border-radius: 13px;
-                    background-color: #00A7FD;
-                    box-shadow: 0px 0px 6px #00C1FDCC;
-                    
-                }
-
-                span{
-                    display: none;
-                }
             }
+            
+            .icon{
+                font-size: 24px;
+                color: #797474;
+                padding:13px 13px 13px 13px ; 
+                border-radius: 13px;
+            }
+
+            .icon:hover{
+                color:white;
+                border-radius: 13px;
+                background-color: #00A7FD;
+                box-shadow: 0px 0px 6px #00C1FDCC;
+
+            }
+
+            .icon:hover + span{
+                color: #00A7FD;
+                text-shadow: 0px 0px 6px #00C1FDCC;
+
+            }
+
+            
+
+            .gears{
+                height: 24px;
+                width: 24px;
+                padding:11px 9px 11px 9px ; 
+            }
+
+            .gears:hover{
+
+                color: #00A7FD;
+                background-color: #00A7FD;
+                box-shadow: 0px 0px 6px #00C1FDCC; 
+
+                border-radius: 13px;
+                background-color: #00A7FD;
+                box-shadow: 0px 0px 6px #00c2fd56;
+                
+            }
+
+            
+
+            span{
+                padding-left: 1.1875rem;
+                color:#939393;
+            }
+            
         }
         .version{
-            display: none;
+            position: absolute;
+            left: 2.6875rem;
+            bottom: 2.3125rem;
+            color:#939393;;
         }
     }
-    
 
 
 
-    @media (max-width: 1023px) and  (min-width:768px){
-        height: 10%;
+    @media (max-width: 1200px) and  (min-width:451px){
+        height: 6rem;
         width: 100%;
         display: flex;
+
         .logo{
             width:4rem;
             height:4rem;
@@ -105,7 +143,7 @@
             flex: 1;
             display: flex;
             flex-direction: row;
-
+            
             li{
                 list-style-type: none;
                 padding-bottom: 1rem;
@@ -126,7 +164,6 @@
                     border-radius: 13px;
                     background-color: #00A7FD;
                     box-shadow: 0px 0px 6px #00C1FDCC;
-                    
                 }
 
                 span{
@@ -142,70 +179,64 @@
 
       }
 
-
-    @media(min-width: 1024px){
-        section{
+      @media(max-width:450px){
+        height: 6rem;
+        width: 100%;
         display: flex;
-        gap:10px;
-        padding-top: 7rem;
-        padding-left: 1.875rem;
-        padding-bottom: 3.75rem;
+        align-items: center;
+        padding-bottom: 1rem;
         
-        div{
-            display: grid;
-            grid-template-rows: 1fr 2fr;
-
-            strong{
-                color:#333333;
-                font-size: 16px;
-
-            }
-            span{
-                color:#939393;
-                font-size: 12px;
-                text-align: start;
-                
-            }
-        
-        }
-    }
-        .options{
-            li{
+        section{
             display: flex;
-            list-style-type: none;
-            padding-bottom: 1rem;
-            align-content: center;
+            flex: 1;
             align-items: center;
-
-            }
-            .icon{
-                height: 14;
-                width: 18;
-                font-size: 24px;
-                color: #797474;
-                padding:11px 9px 11px 9px ; 
+            padding-left: 1rem;
+            .logo{
+                width:3rem;
+                height:3rem;
             }
 
-            .icon:hover{
-                color: #ffffff;
-                border-radius: 13px;
-                background-color: #00A7FD;
-                box-shadow: 0px 0px 6px #00C1FDCC;
+            div{
+                display: none;
+            }
+        }
+        
+
+        .options{
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
+
+            li{
+                list-style-type: none;
+                align-content: center;
+                align-items: center;
                 
-            }
 
-            span{
-                padding-left: 1.1875rem;
-                color:#939393;
+                .icon{
+                    height: 3rem;
+                    width: 3rem;
+                    font-size: 24px;
+                    color: #797474;
+                    padding:1px;
+                    
+                }
+                .icon:hover{
+                    color: #ffffff;
+                    border-radius: 13px;
+                    background-color: #00A7FD;
+                    box-shadow: 0px 0px 6px #00C1FDCC;
+                    
+                }
+
+                span{
+                    display: none;
+                }
             }
-            
         }
         .version{
-            position: absolute;
-            left: 2.6875rem;
-            bottom: 2.3125rem;
+            display: none;
         }
     }
-
 }
 

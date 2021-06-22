@@ -1,16 +1,19 @@
 import '../styles/global.scss'
 import styles from '../styles/app.module.scss'
 import NavigationBar from '../Components/NavigationBar';
-import {ApolloRequest} from '../services/api';
+import {GlobalProviders} from '../Context/globalContext'
+import {PokemonProvider} from '../services/api';
 
 function MyApp({ Component, pageProps }) {
   return(
-    <ApolloRequest>
+    <PokemonProvider>
+      <GlobalProviders>
       <div className={styles.appWrapper}>
         <NavigationBar/>
         <Component {...pageProps} />
       </div>
-  </ApolloRequest>
+      </GlobalProviders>
+  </PokemonProvider>
   )
 }
 

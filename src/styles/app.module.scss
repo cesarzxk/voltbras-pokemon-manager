@@ -2,5 +2,17 @@
     display: flex;
     main{
         height: 100vh;
+        
+    }
+
+    @media (min-width:451px) and (max-width: 1200px) {
+        flex-direction: column;
+    }
+
+    @media(max-width:450px){
+        flex-direction: column;
+        main{
+            width: 100%;
+        }
     }
 }

@@ -1,80 +1,54 @@
 import styles from './styles.module.scss';
 import Pokemon from '../Pokemon';
 import Flatlist from "flatlist-react";
-import{gql}from "@apollo/client";
-import { client } from '../../services/api';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useGlobal } from '../../Context/globalContext';
 
-type pokemon ={
-  id:number;
-  name:string;
-  maxcp:number;
-  img:string;
-  type:string[];
-
-}
-
-type data=(pokemon[]);
-  
 
 
 export default function PokemonList() {
-
-
-  const [data, setData]= useState<data>([]);
+  const {filters, key1, key2, data}=useGlobal()
+  const [isntNullFilter, setIsntNullFilter] = useState<boolean>(true);
+  
+  
+  let [lcount, setlCount] = useState<number>(0);
 
   useEffect(()=>{
-    getPokemons()
-  }, []);
+    setIsntNullFilter(filters.every((val)=>{return val==''}));
+    countFiltred()
+  },[filters, key2, key1])
 
+  
+function countFiltred(){
+  let array = []
+  for(let i=0; i<data.length; i++){
+    if(filtering(data[i].type, data[i].maxcp)){
+      array.push(data[i].name)}  
+  }
+  setlCount(array.length);
+}
+  
+  
+function filtering(type:String[], maxCP:number){
 
-
-  async function getPokemons() {
-    await client.query({
-      query:gql`
-      {
-        pokemons(first:151) {
-          number
-          name
-          maxCP
-          image
-          attacks{
-            special{
-              type
+    if (maxCP <= key2 && maxCP >= key1){
+      if(filters.every((val)=>{return val==''})){
+        console.log(1)
+        return true
+        
+      }else{
+        for(let x=0; x< type.length; x++){
+          for(let i=0; i< filters.length; i++){
+            if(type[x] == filters[i]){
+              return true;
             }
           }
         }
-      }`
-
-    }).then(result => {
-      const data = result.data.pokemons.map(response=>{
-        const types = response.attacks.special.map(attack=>{
-          return attack.type}
-        )
-        let newTypes = new Set();
-
-        for(let i=0; i<types.length;i++){
-          newTypes.add(types[i])
-
-        };
-
-        return{
-          id: response.number,  
-          name: response.name, 
-          img: response.image, 
-          type:[...newTypes.values()],
-          maxcp: response.maxCP
-        }
-      })
-
-      setData(data)
-
-      
-
-     }
-    )
-  }
+      }
+    }
+    return false;
+}
 
 
   const renderPokemon = (pokemon) => {
@@ -83,26 +57,30 @@ export default function PokemonList() {
 
   return (
     <div className={styles.container}>
+
       <h1 className={styles.title}>Lista de pokémons</h1>
-      <span className={styles.subTitle}>Total viíveis: 158</span>
-      <div className={styles.flatcontainer}>
-      <Flatlist
+      <span className={styles.subTitle}>Total visíveis: {isntNullFilter? (data.length):(lcount)}</span>
+
+      <section className={styles.flatcontainer}>
+        <div>
+        <Flatlist
         
-        display={{
-          grid: true,
-          minColumnWidth: "240px",
-          rowGap:"15px"
-      
+          display={{
+            grid: true,
+            minColumnWidth: "240px",
+            rowGap:"15px"
+          }}
+
+
           
-        }}
-
-        list={data}
-        renderItem={renderPokemon}
-        renderWhenEmpty={() => <div>List is empty!</div>}
-        sortBy={["name", {key: "name", descending: true}]}
-      />
-      </div>
-
+          list={data}
+          renderItem={renderPokemon}
+          renderWhenEmpty={() => <img style={{alignSelf:'center'}} height={200} width={400} src='./Nada.jpg'/>}
+          sortBy={[{key: "id", descending: false}]}
+          filterBy={pokemon => filtering(pokemon.type, pokemon.maxcp)}
+        />
+        </div>
+      </section>
     </div>
   )
 }
