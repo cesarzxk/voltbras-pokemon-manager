@@ -8,7 +8,7 @@ import { useGlobal } from '../../Context/globalContext';
 
 
 export default function PokemonList() {
-  const {filters, chave1, chave2, data}=useGlobal()
+  const {filters, key1, key2, data}=useGlobal()
   const [isntNullFilter, setIsntNullFilter] = useState<boolean>(true);
   
   
@@ -17,7 +17,7 @@ export default function PokemonList() {
   useEffect(()=>{
     setIsntNullFilter(filters.every((val)=>{return val==''}));
     countFiltred()
-  },[filters])
+  },[filters, key2, key1])
 
   
 function countFiltred(){
@@ -31,16 +31,23 @@ function countFiltred(){
   
   
 function filtering(type:String[], maxCP:number){
-  if (maxCP <= chave2 && maxCP >= chave1){
-    for(let x=0; x< type.length; x++){
-      for(let i=0; i< filters.length; i++){
-        if(type[x] == filters[i]){
-          return true;
+
+    if (maxCP <= key2 && maxCP >= key1){
+      if(filters.every((val)=>{return val==''})){
+        console.log(1)
+        return true
+        
+      }else{
+        for(let x=0; x< type.length; x++){
+          for(let i=0; i< filters.length; i++){
+            if(type[x] == filters[i]){
+              return true;
+            }
+          }
         }
       }
     }
-  }
-  return false;
+    return false;
 }
 
 
@@ -68,13 +75,9 @@ function filtering(type:String[], maxCP:number){
           
           list={data}
           renderItem={renderPokemon}
-
           renderWhenEmpty={() => <img style={{alignSelf:'center'}} height={200} width={400} src='./Nada.jpg'/>}
-          
           sortBy={[{key: "id", descending: false}]}
-          
-
-          filterBy={pokemon => filtering(pokemon.type, pokemon.maxcp)||isntNullFilter}
+          filterBy={pokemon => filtering(pokemon.type, pokemon.maxcp)}
         />
         </div>
       </section>

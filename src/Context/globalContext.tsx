@@ -9,12 +9,12 @@ type globalProviderProps = {
 }
 
 type globalContextData={
-    chave1:number;
-    chave2:number;
+    key1:number;
+    key2:number;
     data:pokemon[];
     filters:String[];
-    setChave1:(n:number)=>void;
-    setChave2:(n:number)=>void;
+    setKey1:(n:number)=>void;
+    setKey2:(n:number)=>void;
     setfilters:(s:String[])=>void;
 
 }
@@ -32,8 +32,8 @@ export const globalContext = createContext({} as globalContextData);
 
 export function GlobalProviders({children}:globalProviderProps){
     const [filters, setfilters] = useState<String[]>(['','','','','','','','','','','','','','','','','',''])
-    const [chave1, setChave1] =useState<number>(0)
-    const [chave2, setChave2] =useState<number>(4000)
+    const [key1, setKey1] =useState<number>(0)
+    const [key2, setKey2] =useState<number>(4000)
     const [data, setData]  = useState<pokemon[]>([]);
 
     useEffect(()=>{
@@ -69,17 +69,15 @@ export function GlobalProviders({children}:globalProviderProps){
         }
       )
     }
-
-
         
     return(
         <globalContext.Provider value={{
-            chave1,
-            chave2,
+            key1,
+            key2,
             filters,
             data,
-            setChave1,
-            setChave2,
+            setKey1,
+            setKey2,
             setfilters,
         }}>
             {children}

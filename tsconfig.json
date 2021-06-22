@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/Components/NavigationBar/Icons/Gears.tsx"  ],
   "exclude": [
     "node_modules"
   ]
