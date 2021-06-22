@@ -61,7 +61,7 @@ Technologies that I used to develop this web application
 - [GraphQL](https://graphql.org/)
 - [Apollo](https://www.apollographql.com/docs/react/)
 - [React Icons](https://react-icons.github.io/react-icons/)
-= [Iconify](https://iconify.design/)
+- [Iconify](https://iconify.design/)
 - [Rc-slider](https://github.com/react-component/slider)
 
 ## 💻 Getting started
