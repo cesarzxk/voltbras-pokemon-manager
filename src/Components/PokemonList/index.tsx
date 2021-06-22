@@ -1,9 +1,12 @@
 import styles from './styles.module.scss';
-import Pokemon from '../Pokemon';
 import Flatlist from "flatlist-react";
+import dynamic from 'next/dynamic';
+
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useGlobal } from '../../Context/globalContext';
+
+const Pokemon = dynamic(() => import('../Pokemon'))
 
 
 
@@ -70,12 +73,11 @@ function filtering(type:String[], maxCP:number){
             minColumnWidth: "240px",
             rowGap:"15px"
           }}
-
-
-          
           list={data}
           renderItem={renderPokemon}
+
           renderWhenEmpty={() => <img style={{alignSelf:'center'}} height={200} width={400} src='./Nada.jpg'/>}
+
           sortBy={[{key: "id", descending: false}]}
           filterBy={pokemon => filtering(pokemon.type, pokemon.maxcp)}
         />
