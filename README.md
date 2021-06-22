@@ -1,34 +1,131 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/122949879-65956280-d352-11eb-9a81-9b75370e37ff.png" width="500px">
 
-## Getting Started
+<h3 align="center">
+  The React/NextJS app for QLPokemonBank.
+</h3>
 
-First, run the development server:
+<p align="center">Come be a Pokemon Master!</p>
+
+<p align="center">
+
+  <a href="https://github.com/cesarzxk/Pokemon-GraphQL/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/cesarzxk/Pokemon-GraphQL?color=00c1fd">
+  </a>
+
+</p>
+
+<p align="center">
+  <a href="#%EF%B8%8F-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-screnshots">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
+
+## 💇🏼 About the project
+
+This application was part of a challenge to test the ability to implement the GraphQL and render information within a ReactJS / NextJS web application.
+
+## 📸 Sreenshots
+
+Images of the application in operation.
+
+<p align="center">
+<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/122956740-a6dc4100-d357-11eb-866c-b1261e79011d.png" width="400px">
+<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/122956492-6c72a400-d357-11eb-91cb-c78b0e8caff6.png" width="400px">
+</p>
+
+<p align="center">
+<img alt="ScreenShot03" src="https://user-images.githubusercontent.com/43748428/122956988-e145de00-d357-11eb-8a00-3cc22d78c250.png" width="400px">
+<img alt="ScreenShot04" src="https://user-images.githubusercontent.com/43748428/122956998-e3a83800-d357-11eb-9440-b9c5dce56334.png" width="400px">
+</p>
+
+<p align="center">
+<img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/122957220-1a7e4e00-d358-11eb-977c-1c3b8e0a03da.png" width="400px">
+<img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/122957228-1ce0a800-d358-11eb-8d3c-f7a8aaecad4e.png" width="400px">
+</p>
+
+
+
+## 🚀 Technologies
+
+Technologies that I used to develop this web application
+
+
+- [ReactJS](https://reactjs.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [NextJS](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [GraphQL](https://graphql.org/)
+- [Apollo](https://www.apollographql.com/docs/react/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+= [Iconify](https://iconify.design/)
+- [Rc-slider](https://github.com/react-component/slider)
+
+## 💻 Getting started
+
+### Requirements
+
+- [NodeJS](https://nodejs.org/en/)
+- [Yarn](https://classic.yarnpkg.com/) or [npm](https://www.npmjs.com/)
+
+
+**Clone the project and access the folder**
 
 ```bash
-npm run dev
-# or
-yarn dev
+$ git clone https://github.com/cesarzxk/Pokemon-GraphQL.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Follow the steps below**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+# Install the dependencies
+$ yarn
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+# To finish, run the webapp 
+$ yarn dev
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+After executed, open it in your browser localhost: 3000 or by clicking on the link below:
 
-## Learn More
+[QLPokemonBank](http://localhost:3000/)
 
-To learn more about Next.js, take a look at the following resources:
+## 🤔 How to contribute
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Make a fork of this repository**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+# Fork using GitHub official command line
+# If you don't have the GitHub CLI, use the web site to do that.
 
-## Deploy on Vercel
+$ gh repo fork cesarzxk/Pokemon-GraphQL
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Follow the steps below**
+
+```bash
+# Clone your fork
+$ git clone your-fork-url && cd Pokemon-GraphQL
+
+# Create a branch with your feature
+$ git checkout -b my-feature
+
+# Make the commit with your changes
+$ git commit -m "My new feature"
+
+# Send the code to your remote branch
+$ git push origin my-feature
+```
+
+After your pull request is merged, you can delete your branch
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with 💜 &nbsp;by César vargas 👋 &nbsp;[See my linkedin](https://www.linkedin.com/in/cs-vargas/)
