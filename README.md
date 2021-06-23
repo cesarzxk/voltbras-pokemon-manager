@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/123134273-005f7100-d427-11eb-97f0-75209d48f6b0.png" width="500px">
+  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/123134273-005f7100-d427-11eb-97f0-75209d48f6b0.png" width="250px">
 
 <h3 align="center">
   The React/NextJS app for Voltbras Pokemon Menager.
