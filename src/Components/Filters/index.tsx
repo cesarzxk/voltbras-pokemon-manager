@@ -39,6 +39,7 @@ export default function Filters() {
 
   return (
     <div className={styles.container}>
+      
       <div className={styles.title}>
         <h1><b>Filtros</b></h1>
       </div>

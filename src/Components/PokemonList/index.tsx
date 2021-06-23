@@ -11,11 +11,10 @@ const Pokemon = dynamic(() => import('../Pokemon'))
 
 
 export default function PokemonList() {
-  const {filters, key1, key2, data}=useGlobal()
-  const [isntNullFilter, setIsntNullFilter] = useState<boolean>(true);
+  const {filters, key1, key2, data} = useGlobal()
   
-  
-  let [lcount, setlCount] = useState<number>(0);
+  const [isntNullFilter, setIsntNullFilter] = useState<boolean>(true); 
+  const [lcount, setlCount] = useState<number>(0);
 
   useEffect(()=>{
     setIsntNullFilter(filters.every((val)=>{return val==''}));
@@ -26,9 +25,11 @@ export default function PokemonList() {
 function countFiltred(){
   let array = []
   for(let i=0; i<data.length; i++){
+
     if(filtering(data[i].type, data[i].maxcp)){
       array.push(data[i].name)}  
   }
+
   setlCount(array.length);
 }
   
@@ -36,13 +37,16 @@ function countFiltred(){
 function filtering(type:String[], maxCP:number){
 
     if (maxCP <= key2 && maxCP >= key1){
+      
       if(filters.every((val)=>{return val==''})){
-        console.log(1)
         return true
         
       }else{
+
         for(let x=0; x< type.length; x++){
+
           for(let i=0; i< filters.length; i++){
+
             if(type[x] == filters[i]){
               return true;
             }
@@ -62,12 +66,13 @@ function filtering(type:String[], maxCP:number){
     <div className={styles.container}>
 
       <h1 className={styles.title}>Lista de pokémons</h1>
+
       <span className={styles.subTitle}>Total visíveis: {isntNullFilter? (data.length):(lcount)}</span>
 
       <section className={styles.flatcontainer}>
         <div>
+
         <Flatlist
-        
           display={{
             grid: true,
             minColumnWidth: "240px",
@@ -81,6 +86,7 @@ function filtering(type:String[], maxCP:number){
           sortBy={[{key: "id", descending: false}]}
           filterBy={pokemon => filtering(pokemon.type, pokemon.maxcp)}
         />
+        
         </div>
       </section>
     </div>
