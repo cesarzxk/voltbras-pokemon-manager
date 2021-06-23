@@ -63,6 +63,7 @@ Technologies that I used to develop this web application
 - [Apollo](https://www.apollographql.com/docs/react/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [Iconify](https://iconify.design/)
+- [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
 - [Rc-slider](https://github.com/react-component/slider)
 
 ## 💻 Getting started
@@ -76,7 +77,7 @@ Technologies that I used to develop this web application
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/cesarzxk/Pokemon-GraphQL.git
+$ git clone https://github.com/cesarzxk/Voltbras-pokemon-menager.git
 ```
 
 **Follow the steps below**
@@ -101,7 +102,7 @@ After executed, open it in your browser localhost: 3000 or by clicking on the li
 # Fork using GitHub official command line
 # If you don't have the GitHub CLI, use the web site to do that.
 
-$ gh repo fork cesarzxk/Pokemon-GraphQL
+$ gh repo fork cesarzxk/Voltbras-pokemon-menager
 
 ```
 
@@ -109,7 +110,7 @@ $ gh repo fork cesarzxk/Pokemon-GraphQL
 
 ```bash
 # Clone your fork
-$ git clone your-fork-url && cd Pokemon-GraphQL
+$ git clone your-fork-url && cd Voltbras-pokemon-menager
 
 # Create a branch with your feature
 $ git checkout -b my-feature
