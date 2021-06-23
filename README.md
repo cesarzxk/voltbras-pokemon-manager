@@ -10,8 +10,20 @@
 
 <p align="center">
 
-  <a href="https://github.com/cesarzxk/Pokemon-GraphQL/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/cesarzxk/Pokemon-GraphQL?color=00c1fd">
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/network">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  </a>
+  
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  </a>
+  
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  </a>
+  
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/blob/main/LICENSE">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
   </a>
 
 </p>
