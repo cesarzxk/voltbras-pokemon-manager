@@ -1,8 +1,9 @@
+
 <h1 align="center">
-  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/122949879-65956280-d352-11eb-9a81-9b75370e37ff.png" width="500px">
+  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/123134273-005f7100-d427-11eb-97f0-75209d48f6b0.png" width="500px">
 
 <h3 align="center">
-  The React/NextJS app for QL Pokemon Menager.
+  The React/NextJS app for Voltbras Pokemon Menager.
 </h3>
 
 <p align="center">Come be a Pokemon Master!</p>
@@ -90,7 +91,7 @@ $ yarn dev
 ```
 After executed, open it in your browser localhost: 3000 or by clicking on the link below:
 
-[QL Pokemon Menager](http://localhost:3000/)
+[Voltbras Pokemon Menager](http://localhost:3000/)
 
 ## 🤔 How to contribute
 
