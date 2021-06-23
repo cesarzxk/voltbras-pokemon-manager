@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
         <NavigationBar/>
         <Component {...pageProps} />
       </div>
+
       </GlobalProviders>
   </PokemonProvider>
   )

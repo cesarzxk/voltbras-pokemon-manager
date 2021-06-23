@@ -7,6 +7,7 @@ const Filters = dynamic(() => import('../Components/Filters'))
 export default function Home() {
   return (
     <div className={styles.container}>
+
         <section className={styles.list}>
             <PokemonList/>
         </section>
@@ -14,6 +15,7 @@ export default function Home() {
         <section className={styles.options}>
           <Filters/>
         </section>
+        
     </div>
   )
 }

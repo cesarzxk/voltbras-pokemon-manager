@@ -27,7 +27,7 @@ export default function NavigationBar() {
 
       <ul className={styles.options}>
 
-        <li className={ isHome? (styles.ishome):(undefined) }>
+        <li className={ isHome? (styles.ishome):(undefined)}>
           <Link href='/'>
             <HiOutlineViewList className={styles.icon}/>
           </Link>
