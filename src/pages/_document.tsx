@@ -4,7 +4,7 @@ export default class MyDocument extends Document{
         return(
             <Html>
                 <Head>
-                    <title>QL Pokemon Menager</title>
+                    <title>Voltbras Pokemon Menager</title>
                     <link rel="icon" href="voltbras logo.png"/>
                     <link rel="preconnect" href="https://fonts.googleapis.com"/>
                     <link rel="preconnect" href="https://fonts.gstatic.com"/>
