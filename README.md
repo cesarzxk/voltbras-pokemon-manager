@@ -9,6 +9,8 @@
 <p align="center">Come be a Pokemon Master!</p>
 
 <p align="center">
+  
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
 
   <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/network">
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
