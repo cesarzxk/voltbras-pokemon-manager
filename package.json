@@ -14,7 +14,7 @@
     "@types/react-sidebar": "^3.0.2",
     "flatlist-react": "^1.5.0",
     "graphql": "^15.5.0",
-    "next": "11.0.0",
+    "next": "12.1.0",
     "next-transpile-modules": "^8.0.0",
     "rc-slider": "^9.7.2",
     "react": "17.0.2",
