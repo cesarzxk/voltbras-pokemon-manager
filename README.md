@@ -53,8 +53,9 @@ Images of the application in operation.
 </p>
   
 <p align="center">
-<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/158083615-8c2d0b71-9a53-47d3-820e-682fbbca1773.png" width="200px" height="500px">
-<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/158083616-395aa93e-08ce-4f77-b2fb-297da120cc16.png" width="200px" height="500px">
+<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/158083615-8c2d0b71-9a53-47d3-820e-682fbbca1773.png" width="250px" height="500px">
+<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/158083616-395aa93e-08ce-4f77-b2fb-297da120cc16.png" width="250px" height="500px">
+<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/158083732-5ff7b8f3-7d82-46c5-96cf-7ab25710a228.png" width="250px" height="500px">
 </p>
   
  
