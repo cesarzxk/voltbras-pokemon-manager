@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import styles  from './home.module.scss';
-import { useEffect, useState, useW} from 'react';
+import {useState} from 'react';
 import Sidebar from 'react-sidebar';
 import {FaFilter} from 'react-icons/fa'
 import { useWindowSize } from '../Hooks/useWindowSize';
