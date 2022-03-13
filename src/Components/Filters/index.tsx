@@ -4,6 +4,7 @@ import 'rc-slider/assets/index.css';
 import { useGlobal } from '../../Context/globalContext';
 import { useState } from 'react';
 
+
 export default function Filters() {
   const {filters, setKey1, setKey2, setfilters} = useGlobal()
   const [viewkey1, setViewKey1] = useState<number>(0)
@@ -38,11 +39,13 @@ export default function Filters() {
 
 
   return (
-    <div className={styles.container}>
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <h1><b>Filtros</b></h1>
+        </div>
+
       
-      <div className={styles.title}>
-        <h1><b>Filtros</b></h1>
-      </div>
+      
 
       <div className={styles.sliderBar}>
         <span>maxCP</span>
@@ -70,11 +73,10 @@ export default function Filters() {
       </div>
 
       <section className={styles.types}>
-
+      
         <span>Types</span>
 
           <div className={styles.table}>
-
             <div className={styles.col1}>
 
               <span><input id='1' 
@@ -225,11 +227,9 @@ export default function Filters() {
               </span>
 
             </div>
-
           </div>
-
       </section>
-    
-    </div>
+      </div>
+      
   )
 }
