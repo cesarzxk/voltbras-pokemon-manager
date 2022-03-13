@@ -51,16 +51,15 @@ Images of the application in operation.
 <img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/122956492-6c72a400-d357-11eb-91cb-c78b0e8caff6.png" width="400px">
 <img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/122956740-a6dc4100-d357-11eb-866c-b1261e79011d.png" width="400px">
 </p>
-
+  
 <p align="center">
-<img alt="ScreenShot03" src="https://user-images.githubusercontent.com/43748428/122956988-e145de00-d357-11eb-8a00-3cc22d78c250.png" width="400px">
-<img alt="ScreenShot04" src="https://user-images.githubusercontent.com/43748428/122956998-e3a83800-d357-11eb-9440-b9c5dce56334.png" width="400px">
+<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/158083615-8c2d0b71-9a53-47d3-820e-682fbbca1773.png" width="200px">
+<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/158083616-395aa93e-08ce-4f77-b2fb-297da120cc16.png" width="200px">
 </p>
+  
+ 
 
-<p align="center">
-<img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/122957220-1a7e4e00-d358-11eb-977c-1c3b8e0a03da.png" width="400px">
-<img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/122957228-1ce0a800-d358-11eb-8d3c-f7a8aaecad4e.png" width="400px">
-</p>
+
 
 
 
