@@ -9,6 +9,10 @@
         padding-left: 40px;
     }
 
+    .filterButtom{
+        display: none;
+    }
+
     .sliderBar{
         padding-left: 40px;
         padding-top: 20px;
@@ -105,121 +109,7 @@
             }
         }  
     }
-
-    @media (min-width:451px) and (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        border-radius: 50px 50px 50px 50px;
-
-        .sliderBar{
-            width: 90%;
-            align-self: center;
-
-            padding-left: 0px;
-        }
-        .types{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-width: 90%;
-            height: 41%;
-            padding-bottom: 2rem;
-            padding-top:2rem;
-
-            .table{
-                overflow-y: scroll;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                div{
-                    display: grid;
-                    grid-template-columns:  1fr 1fr;
-                }
-            }
-            .table::-webkit-scrollbar{
-                width: 12px;
-                    
-                
-            }
-            .table::-webkit-scrollbar-thumb{
-                background: #DBDBDB 0% 0% no-repeat padding-box;
-                width: 12px;
-                height: 54px;
-                border-radius: 6px;
-            
-            }
-        
-            .flatcontainer::-webkit-scrollbar-track {
-                background: #FFFFFF 0% 0% no-repeat padding-box;  
-                border-radius: 9px;
-                }
-        }
-        
-    }
-
-    @media(max-width:450px){
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        border-radius: 50px 50px 50px 50px;
-        align-content: center;
-        padding-bottom: 2rem;
-        
-
-        .title{
-            padding-top: 2rem;
-            padding-left: 20px;
-        }
-
-        .sliderBar{
-            align-self: center;
-            padding-left: 0px;
-            width: 85%;
-            
-        }
-        .types{
-            
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 95%;
-            height: 15vh;
-            
-            padding-top:1rem;
-            padding-left: 10px;
-            padding-right: 10px;
-
-            .table{
-                overflow-y: scroll;
-                .col3{
-                    margin-right: 10px;
-                }
-                .col1{margin-left: 5px;
-                }
-                div{row-gap: 15px;}
-                
-            }
-            .table::-webkit-scrollbar{
-                width: 12px;
-                    
-                
-            }
-            .table::-webkit-scrollbar-thumb{
-                background: #DBDBDB 0% 0% no-repeat padding-box;
-                width: 12px;
-                height: 54px;
-                border-radius: 6px;
-            
-            }
-        
-            .flatcontainer::-webkit-scrollbar-track {
-                background: #FFFFFF 0% 0% no-repeat padding-box;  
-                border-radius: 9px;
-                }
-        }
-        
-
-    }
 }
+
+@import './1200px.scss';
+@import './450px.scss';

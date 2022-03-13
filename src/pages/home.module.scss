@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    overflow: hidden;
 
     .options{
         align-self: center;
@@ -16,6 +17,32 @@
         flex-direction: column-reverse;
         justify-content: none;
         align-content: none;
+
+        .filterButton0{
+            position: absolute;
+            right: 10%;
+            top: 14%;
+            border: none;
+
+            .filterButtonIcon{
+                font-size: 25px;
+                color:#999999;
+            }
+        }
+
+        .filterButton{
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            border: none;
+
+            .filterButtonIcon{
+                font-size: 25px;
+                color:#999999;
+            }
+        }
+
+       
 
         .options{
             align-self: none;
@@ -37,6 +64,30 @@
         justify-content: none;
         align-content: none;
         flex:1;
+
+        .filterButton0{
+            position: absolute;
+            right: 10%;
+            top: 14%;
+            border: none;
+
+            .filterButtonIcon{
+                font-size: 25px;
+                color:#999999;
+            }
+        }
+
+        .filterButton{
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            border: none;
+
+            .filterButtonIcon{
+                font-size: 25px;
+                color:#999999;
+            }
+        }
         
         .options{
             
