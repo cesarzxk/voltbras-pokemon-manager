@@ -10,22 +10,22 @@
 
 <p align="center">
   
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/Voltbras-pokemon-manager?color=00c1fd">
 
-  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/network">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-manager/network">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Voltbras-pokemon-manager?color=00c1fd">
   </a>
   
-  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-manager/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/Voltbras-pokemon-manager?color=00c1fd">
   </a>
   
-  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-manager/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/Voltbras-pokemon-manager?color=00c1fd">
   </a>
   
-  <a href="https://github.com/cesarzxk/Voltbras-pokemon-menager/blob/main/LICENSE">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/Voltbras-pokemon-menager?color=00c1fd">
+  <a href="https://github.com/cesarzxk/Voltbras-pokemon-manager/blob/main/LICENSE">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/Voltbras-pokemon-manager?color=00c1fd">
   </a>
 
 </p>
@@ -91,7 +91,7 @@ Technologies that I used to develop this web application
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/cesarzxk/Voltbras-pokemon-menager.git
+$ git clone https://github.com/cesarzxk/Voltbras-pokemon-manager.git
 ```
 
 **Follow the steps below**
@@ -106,7 +106,7 @@ $ yarn dev
 ```
 After executed, open it in your browser localhost: 3000 or by clicking on the link below:
 
-[Voltbras Pokemon Menager](http://localhost:3000/)
+[Voltbras Pokemon Manager](http://localhost:3000/)
 
 ## 🤔 How to contribute
 
@@ -116,7 +116,7 @@ After executed, open it in your browser localhost: 3000 or by clicking on the li
 # Fork using GitHub official command line
 # If you don't have the GitHub CLI, use the web site to do that.
 
-$ gh repo fork cesarzxk/Voltbras-pokemon-menager
+$ gh repo fork cesarzxk/Voltbras-pokemon-manager
 
 ```
 
@@ -124,7 +124,7 @@ $ gh repo fork cesarzxk/Voltbras-pokemon-menager
 
 ```bash
 # Clone your fork
-$ git clone your-fork-url && cd Voltbras-pokemon-menager
+$ git clone your-fork-url && cd Voltbras-pokemon-manager
 
 # Create a branch with your feature
 $ git checkout -b my-feature
