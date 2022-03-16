@@ -3,7 +3,7 @@
   <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/123134273-005f7100-d427-11eb-97f0-75209d48f6b0.png" width="150px">
 
 <h3 align="center">
-  The React/NextJS app for Voltbras Pokemon Menager.
+  The React/NextJS app for Voltbras Pokemon Manager.
 </h3>
 
 <p align="center">Come be a Pokemon Master!</p>
