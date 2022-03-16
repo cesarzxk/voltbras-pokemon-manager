@@ -21,7 +21,7 @@ export default function NavigationBar() {
         <img className={styles.logo} src='/Voltbras logo.png'/>
         <div>
           <strong>Voltbras App</strong>
-          <span>Pokémon Menager</span>
+          <span>Pokémon Manager</span>
         </div>
       </section>
 
